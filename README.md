@@ -1,6 +1,6 @@
-# PJ Core Dev Tools - AI Coding Rules
+# Cross Segment AI Tools - AI Coding Rules
 
-This repository contains AI coding rules and patterns for PJ and Core development workflows. The CLI features have been moved to the nucli project.
+This repository contains AI coding rules and patterns for cross-segment development workflows (PJ, Core, and other segments). The CLI features have been moved to the nucli project.
 
 ## 📁 Structure
 
@@ -19,24 +19,24 @@ This repository contains AI coding rules and patterns for PJ and Core developmen
 
 ## 🤖 Available AI Agents
 
-This repository currently focuses on **AI Agents** - specialized assistants that help developers with specific PJ and Core development tasks. These agents are defined as `.mdc` files and can be installed via the `pj-core-dev-tools` CLI.
+This repository currently focuses on **AI Agents** - specialized assistants that help developers with cross-segment development tasks (PJ, Core, and other segments). These agents are defined as `.mdc` files and can be installed via the `cross-segment-ai-tools` CLI.
 
 ### Quick Install
 
-The CLI is integrated into **nucli**. Once you have nucli set up, you can use the `pj-core-dev-tools` command directly:
+The CLI is integrated into **nucli**. Once you have nucli set up, you can use the `cross-segment-ai-tools` command directly:
 
 ```bash
 # Install agents to your project
-pj-core-dev-tools rules install ~/dev/my-project
+cross-segment-ai-tools rules install ~/dev/my-project
 
 # Update agents in a project
-pj-core-dev-tools rules update ~/dev/my-project
+cross-segment-ai-tools rules update ~/dev/my-project
 
 # Remove agents from a project
-pj-core-dev-tools rules remove ~/dev/my-project
+cross-segment-ai-tools rules remove ~/dev/my-project
 ```
 
-**Note**: The command will automatically clone the `pj-core-dev-tools` repository if it doesn't exist locally.
+**Note**: The command will automatically clone the `cross-segment-ai-tools` repository if it doesn't exist locally.
 
 ### 🐦 PJ Agents
 
@@ -98,7 +98,7 @@ Place new AI agent files in:
    - `.cursor/rules/core/agents/` - For Core-specific agents
 2. Follow the existing naming conventions and structure
 3. Include comprehensive documentation and examples
-4. Test with the pj-core-dev-tools CLI (from nucli)
+4. Test with the cross-segment-ai-tools CLI (from nucli)
 
 ### Agent Format
 
@@ -120,7 +120,7 @@ Agents use `.mdc` (Markdown with Cursor extensions) format optimized for AI codi
 
 ## 📜 License
 
-This project is part of the Nu PJ and Core development ecosystem. See repository license for details.
+This project is part of the Nu cross-segment development ecosystem. See repository license for details.
 
 ---
 
