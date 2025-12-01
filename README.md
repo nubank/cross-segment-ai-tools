@@ -23,14 +23,20 @@ This repository currently focuses on **AI Agents** - specialized assistants that
 
 ### Quick Install
 
-```bash
-# The CLI is now in nucli - install from there
-cd ~/dev/nu/nucli/nucli.d/pj-core-dev-tools.d
-./scripts/install
+The CLI is integrated into **nucli**. Once you have nucli set up, you can use the `pj-core-dev-tools` command directly:
 
-# Then use it to install agents to your projects
+```bash
+# Install agents to your project
 pj-core-dev-tools rules install ~/dev/my-project
+
+# Update agents in a project
+pj-core-dev-tools rules update ~/dev/my-project
+
+# Remove agents from a project
+pj-core-dev-tools rules remove ~/dev/my-project
 ```
+
+**Note**: The command will automatically clone the `pj-core-dev-tools` repository if it doesn't exist locally.
 
 ### 🐦 PJ Agents
 
