@@ -10,8 +10,10 @@ This repository contains **AI Agents** - specialized assistants that help develo
     ├── agents/                  # General-purpose AI agents
     ├── pj/                      # PJ-specific AI agents
     │   └── agents/              # PJ domain agents
-    └── core/                    # Core-specific AI agents
-        └── agents/              # Core domain agents
+    ├── core/                    # Core-specific AI agents
+    │   └── agents/              # Core domain agents
+    └── high-income/             # High Income-specific AI agents
+        └── agents/              # High Income domain agents
 ```
 
 ## 🤖 Available AI Agents
@@ -48,10 +50,16 @@ cross-segment-ai-tools rules remove ~/dev/my-project
   - Follows established patterns in the Experimentation domain
 - **Invocation**: Use `@cockpidgey-ai-agent` to start the guided workflow
 
+### 💎 High Income Agents
+
+High Income-specific AI agents will be available here.
+
+**Location**: `.cursor/rules/high-income/agents/`
+
 ### 🎯 Agent Categories
 
 Agents are organized by:
-- **Domain** (PJ, Core)
+- **Domain** (PJ, Core, High Income)
 - **Purpose** (metrics creation, code generation, etc.)
 - **Scope** (general-purpose vs domain-specific)
 
@@ -84,6 +92,7 @@ Place new AI agent files in:
 - `.cursor/rules/agents/` - For general-purpose agents
 - `.cursor/rules/pj/agents/` - For PJ-specific agents
 - `.cursor/rules/core/agents/` - For Core-specific agents
+- `.cursor/rules/high-income/agents/` - For High Income-specific agents
 
 ## 🔧 Development
 
@@ -93,6 +102,7 @@ Place new AI agent files in:
    - `.cursor/rules/agents/` - For general-purpose agents
    - `.cursor/rules/pj/agents/` - For PJ-specific agents
    - `.cursor/rules/core/agents/` - For Core-specific agents
+   - `.cursor/rules/high-income/agents/` - For High Income-specific agents
 2. Follow the existing naming conventions and structure
 3. Include comprehensive documentation and examples
 4. Test with the cross-segment-ai-tools CLI (from nucli)
