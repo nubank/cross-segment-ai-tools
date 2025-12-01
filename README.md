@@ -43,13 +43,6 @@ High Income-specific AI agents are available in `.cursor/rules/high-income/agent
 
 Core-specific AI agents are available in `.cursor/rules/core/agents/`
 
-### 🎯 Agent Categories
-
-Agents are organized by:
-- **Domain** (PJ, Core, High Income)
-- **Purpose** (metrics creation, code generation, etc.)
-- **Scope** (general-purpose vs domain-specific)
-
 ## 📖 Adding New AI Agents
 
 AI agents are defined as individual `.mdc` files in the `.cursor/rules/agents/` or domain-specific agent directories. Each agent file should:
