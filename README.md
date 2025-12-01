@@ -1,6 +1,6 @@
 # Cross Segment AI Tools
 
-This repository contains **AI Agents** - specialized assistants that help developers with cross-segment development tasks (PJ, Core, and other segments). The CLI features have been moved to the nucli project.
+This repository contains **AI Agents** - specialized assistants that help developers with cross-segment development tasks (PJ, Core, High Income, and other segments). The CLI features have been moved to the nucli project.
 
 ## 📁 Structure
 
@@ -18,7 +18,7 @@ This repository contains **AI Agents** - specialized assistants that help develo
 
 ## 🤖 Available AI Agents
 
-This repository currently focuses on **AI Agents** - specialized assistants that help developers with cross-segment development tasks (PJ, Core, and other segments). These agents are defined as `.mdc` files and can be installed via the `cross-segment-ai-tools` CLI.
+This repository currently focuses on **AI Agents** - specialized assistants that help developers with cross-segment development tasks (PJ, Core, High Income, and other segments). These agents are defined as `.mdc` files and can be installed via the `cross-segment-ai-tools` CLI.
 
 ### Quick Install
 
