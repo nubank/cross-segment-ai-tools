@@ -22,39 +22,26 @@ This repository currently focuses on **AI Agents** - specialized assistants that
 
 ### Quick Install
 
-The CLI is integrated into **nucli**. Once you have nucli set up, you can use the `cross-segment-ai-tools` command directly:
+> **Note**: The CLI is currently under development and will be integrated into **nucli**. Once available, you'll be able to use the `cross-segment-ai-tools` command to install agents to your projects.
 
 ```bash
-# Install agents to your project
-cross-segment-ai-tools rules install ~/dev/my-project
-
-# Update agents in a project
-cross-segment-ai-tools rules update ~/dev/my-project
-
-# Remove agents from a project
-cross-segment-ai-tools rules remove ~/dev/my-project
+# Future CLI usage (coming soon):
+# cross-segment-ai-tools rules install ~/dev/my-project
+# cross-segment-ai-tools rules update ~/dev/my-project
+# cross-segment-ai-tools rules remove ~/dev/my-project
 ```
-
-**Note**: The command will automatically clone the `cross-segment-ai-tools` repository if it doesn't exist locally.
 
 ### 🐦 PJ Agents
 
-#### Cockpidgey AI Agent
-- **Location**: `.cursor/rules/pj/agents/cockpidgey-ai-agent.mdc`
-- **Purpose**: Helps developers create simple metrics in Cockpit in a guided and interactive way
-- **Features**:
-  - Guides developers in creating simple metrics (User-level Base Metrics)
-  - Collects information iteratively and in a friendly manner
-  - Creates one metric at a time: `-users`, `-volume`, or `-value`
-  - Ensures Event Logs and necessary records are created
-  - Follows established patterns in the Experimentation domain
-- **Invocation**: Use `@cockpidgey-ai-agent` to start the guided workflow
+PJ-specific AI agents are available in `.cursor/rules/pj/agents/`
 
 ### 💎 High Income Agents
 
-High Income-specific AI agents will be available here.
+High Income-specific AI agents are available in `.cursor/rules/high-income/agents/`
 
-**Location**: `.cursor/rules/high-income/agents/`
+### 🏦 Core Agents
+
+Core-specific AI agents are available in `.cursor/rules/core/agents/`
 
 ### 🎯 Agent Categories
 
