@@ -1,20 +1,17 @@
-# Cross Segment AI Tools - AI Coding Rules
+# Cross Segment AI Tools
 
-This repository contains AI coding rules and patterns for cross-segment development workflows (PJ, Core, and other segments). The CLI features have been moved to the nucli project.
+This repository contains **AI Agents** - specialized assistants that help developers with cross-segment development tasks (PJ, Core, and other segments). The CLI features have been moved to the nucli project.
 
 ## 📁 Structure
 
 ```
 .cursor/
-└── rules/                       # AI coding rules and patterns
-    ├── clojure/                 # Clojure language rules
-    │   ├── datomic/            # Datomic database rules
-    │   ├── diplomat_architecture/  # Diplomat Architecture patterns
-    │   └── testing/            # Testing guidelines
-    ├── scala/                   # Scala language rules
-    ├── pj/                      # PJ-specific rules and patterns
-    ├── core/                    # Core-specific rules and patterns
-    └── agents/                  # AI agent definitions (MD files)
+└── rules/                       # AI agent definitions
+    ├── agents/                  # General-purpose AI agents
+    ├── pj/                      # PJ-specific AI agents
+    │   └── agents/              # PJ domain agents
+    └── core/                    # Core-specific AI agents
+        └── agents/              # Core domain agents
 ```
 
 ## 🤖 Available AI Agents
@@ -124,5 +121,5 @@ This project is part of the Nu cross-segment development ecosystem. See reposito
 
 ---
 
-**Note**: The CLI features for managing these rules have been moved to the nucli project for centralized tooling management. This repository now focuses exclusively on the AI coding rules and patterns.
+**Note**: The CLI features for managing these agents have been moved to the nucli project for centralized tooling management. This repository focuses exclusively on AI agents for cross-segment development workflows.
 
