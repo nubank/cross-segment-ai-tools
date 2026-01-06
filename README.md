@@ -1,129 +1,216 @@
-# PJ Core Dev Tools - AI Coding Rules
+# Cross-Segment AI Tools
 
-This repository contains AI coding rules and patterns for PJ and Core development workflows. The CLI features have been moved to the nucli project.
+AI-powered coding assistants for Nu's cross-segment development workflows. This repository contains Cursor rules and commands that automate repetitive tasks, enforce best practices, and accelerate development across Core, PJ, and other data domains.
 
-## 📁 Structure
+## 🚀 Quick Start
+
+### Installation
+
+Install commands or rules to your project using the `nu` CLI:
+
+```bash
+# Install commands to a project
+nu cross-segment-ai-tools commands install <repo>
+nu cross-segment-ai-tools commands install itaipu
+nu cross-segment-ai-tools commands install ~/dev/nu/my-project
+
+# Install rules to a project
+nu cross-segment-ai-tools rules install <repo>
+nu cross-segment-ai-tools rules install itaipu
+nu cross-segment-ai-tools rules install ~/dev/nu/my-project
+```
+
+### Update
+
+Keep your tools up to date:
+
+```bash
+# Update all projects that have commands installed
+nu cross-segment-ai-tools commands update
+
+# Update a specific project
+nu cross-segment-ai-tools commands update ~/dev/nu/itaipu
+
+# Update all projects that have rules installed
+nu cross-segment-ai-tools rules update
+
+# Update a specific project
+nu cross-segment-ai-tools rules update ~/dev/nu/itaipu
+```
+
+### Remove
+
+Remove tools from a project:
+
+```bash
+# Remove commands from a project
+nu cross-segment-ai-tools commands remove <repo>
+nu cross-segment-ai-tools commands remove itaipu
+
+# Remove rules from a project
+nu cross-segment-ai-tools rules remove <repo>
+nu cross-segment-ai-tools rules remove itaipu
+```
+
+### Help
+
+```bash
+nu cross-segment-ai-tools commands --help
+nu cross-segment-ai-tools rules --help
+```
+
+---
+
+## 📁 Repository Structure
 
 ```
 .cursor/
-└── rules/                       # AI coding rules and patterns
-    ├── clojure/                 # Clojure language rules
-    │   ├── datomic/            # Datomic database rules
-    │   ├── diplomat_architecture/  # Diplomat Architecture patterns
-    │   └── testing/            # Testing guidelines
-    ├── scala/                   # Scala language rules
-    ├── pj/                      # PJ-specific rules and patterns
-    ├── core/                    # Core-specific rules and patterns
-    └── agents/                  # AI agent definitions (MD files)
+├── commands/                    # AI commands (executable prompts)
+│   ├── core/                    # Core-specific commands
+│   │   └── pe-de-pano-v2.md    # Purple Loop campaign automation
+│   ├── pj/                      # PJ-specific commands
+│   └── cross-segments/          # Cross-segment commands
+│       └── rapidash.md          # Audience Manager attribute generator
+│
+└── rules/                       # AI rules (context & guidelines)
+    ├── agents/                  # General-purpose AI agents
+    │   └── Rapidash v1.1.md    # Rapidash agent definition
+    ├── pj/                      # PJ-specific rules
+    │   └── agents/
+    └── core/                    # Core-specific rules
+        └── agents/
 ```
 
-## 🚀 Using the Rules
+---
 
-The rules in this repository are managed by the `pj-core-dev-tools` CLI, which is now part of the **nucli** project.
+## 🤖 Available AI Assistants
 
-### Quick Install
+### 🔥 Rapidash — Audience Manager Attribute Generator
 
-```bash
-# The CLI is now in nucli - install from there
-cd ~/dev/nu/nucli/nucli.d/pj-core-dev-tools.d
-./scripts/install
+**Domain:** Cross-segment (Core, PJ, High-Income)
 
-# Then use it to install rules to your projects
-pj-core-dev-tools rules install ~/dev/my-project
-```
+Rapidash automates the entire process of creating audience manager attributes—from requirements gathering to production-ready code. In ~10 minutes, it can:
 
-### Available Rules
+- ✅ Generate complete Scala attribute code
+- ✅ Detect duplicates with comprehensive validation
+- ✅ Suggest attribute generators for parameter variations
+- ✅ Handle git workflows automatically
+- ✅ Deliver a ready-to-review pull request
 
-#### 🔧 Clojure Rules
+**How to use:**
+1. Open your Itaipu project in Cursor
+2. Use the command: `/rapidash`
+3. Follow the conversational prompts
 
-- **Core Language**: Idiomatic Clojure development patterns, data structures, and functional programming
-- **Diplomat Architecture**: Complete architectural patterns for layered service design
-- **Datomic**: Database interaction patterns and best practices
-- **Error Handling**: Robust error handling and validation patterns
-- **Testing**: Comprehensive testing strategies and patterns
-- **State Management**: Concurrent state management patterns
-- **Performance**: Java interop and performance optimization
+**Supported domains:** `core-brazil`, `high-income`, `pj-brazil`, and more
 
-#### 📊 Scala Rules
+---
 
-- **Dataset Patterns**: Function-oriented dataset generation following data engineering best practices
-- **Unit Testing**: Comprehensive unit testing patterns
+### 🦶 Pé de Pano — Purple Loop Campaign Automation
 
-#### 🏢 PJ & Core Specific Rules
+**Domain:** Core (PF segment)
 
-- **PJ Rules**: Business logic patterns specific to PJ (Pessoa Jurídica) domain
-- **Core Rules**: Core banking patterns and best practices
-- **AI Agents**: Individual AI agent definitions for specific use cases
+Pé de Pano automates three Purple Loop-related tasks:
 
-### 🎯 Rule Categories
+1. **Campaign Updater** — Add campaign vals to product config files
+2. **Templates Updater** — Insert templates into product template lists
+3. **Ranking Strategy Updater** — Include campaigns in ranking strategy lists
 
-All rules are organized by:
-- **Language** (clojure, scala)
-- **Domain** (PJ, Core, architect patterns, testing)
-- **Specificity** (core language features vs specialized frameworks)
+**How to use:**
+1. Open your Itaipu project in Cursor
+2. Use the command: `/pe-de-pano-v2`
+3. Provide campaign/template data as tables
+4. Review dry-run plan before applying changes
 
-## 📖 Adding AI Agents
+**Supported products:** Money Boxes, Caixinha Turbo, Insurance, Lending, and 30+ more
 
-AI agents are defined as individual `.mdc` files in the `.cursor/rules/agents/` directory. Each agent file should:
+---
 
-1. **Follow the `.mdc` format** with frontmatter metadata
-2. **Include clear description** of the agent's purpose
-3. **Define scope** using `globs` patterns
-4. **Specify if always applied** using `alwaysApply: true/false`
+## 🎯 Commands vs Rules
 
-### Example Agent Structure
+| Feature | Commands | Rules |
+|---------|----------|-------|
+| **Purpose** | Executable prompts for specific tasks | Context & guidelines for AI behavior |
+| **Usage** | Invoke with `/command-name` | Applied automatically or by glob pattern |
+| **Scope** | Task-specific (e.g., create attribute) | Domain-wide (e.g., Scala best practices) |
+| **Output** | Code, PRs, changes | AI behavior modification |
+
+---
+
+## 📖 Adding New Agents or Commands
+
+### Adding a New Command
+
+1. Create a new `.md` file in the appropriate folder:
+   - `.cursor/commands/core/` — Core-specific
+   - `.cursor/commands/pj/` — PJ-specific
+   - `.cursor/commands/cross-segments/` — Cross-segment
+
+2. Include clear step-by-step instructions for the AI
+
+3. Test with a real project before committing
+
+### Adding a New Rule/Agent
+
+1. Create a new `.md` or `.mdc` file in the appropriate folder:
+   - `.cursor/rules/agents/` — General-purpose
+   - `.cursor/rules/pj/agents/` — PJ-specific
+   - `.cursor/rules/core/agents/` — Core-specific
+
+2. For `.mdc` files, use frontmatter:
 
 ```markdown
 ---
-description: "Agent description and purpose"
-globs: ["**/*.clj", "**/pj/**"]
+description: "Brief description of the agent"
+globs: ["**/*.scala", "**/pj/**"]
 alwaysApply: false
 ---
 
 # Agent Name
 
-Agent-specific rules and guidelines...
+Your agent rules and guidelines...
 ```
 
-### Recommended Location for New Agents
-
-Place new AI agent files in:
-- `.cursor/rules/agents/` - For general-purpose agents
-- `.cursor/rules/pj/agents/` - For PJ-specific agents
-- `.cursor/rules/core/agents/` - For Core-specific agents
-
-## 🔧 Development
-
-### Adding New Rules
-
-1. Create new `.mdc` files in the appropriate category folder
-2. Follow the existing naming conventions and structure
-3. Include comprehensive documentation and examples
-4. Test with the pj-core-dev-tools CLI (from nucli)
-
-### Rule Format
-
-Rules use `.mdc` (Markdown with Cursor extensions) format optimized for AI coding assistants:
-
-- Clear, actionable patterns
-- Comprehensive examples
-- Business context and reasoning
-- Anti-patterns to avoid
-- Testing strategies
-
-## 🤝 Contributing
-
-1. Rules should be **specific and actionable**
-2. Include **business context** and reasoning
-3. Provide **positive and negative examples**
-4. Follow **existing naming conventions**
-5. Test rules with real projects before submitting
-
-## 📜 License
-
-This project is part of the Nu PJ and Core development ecosystem. See repository license for details.
+3. Test the rule with real projects
 
 ---
 
-**Note**: The CLI features for managing these rules have been moved to the nucli project for centralized tooling management. This repository now focuses exclusively on the AI coding rules and patterns.
+## 🛠️ Development
 
+### Prerequisites
+
+- [Cursor IDE](https://cursor.sh/) with AI features enabled
+- Access to Nu's internal repositories
+- `nu` CLI installed
+
+### Testing Changes
+
+1. Make your changes to commands/rules
+2. Install to a test project:
+   ```bash
+   nu cross-segment-ai-tools commands install ~/dev/nu/test-project
+   ```
+3. Test the AI assistant behavior
+4. Update if needed
+
+---
+
+## 🤝 Contributing
+
+1. **Keep it focused** — Each command/rule should have a clear, single purpose
+2. **Document thoroughly** — Include examples and expected behavior
+3. **Test before submitting** — Verify with real projects
+4. **Follow conventions** — Match existing naming and structure
+
+---
+
+## 📚 Related Resources
+
+- [Itaipu Repository](https://github.com/nubank/itaipu) — Main data domains repository
+- [Nu CLI Documentation](https://github.com/nubank/nucli) — CLI tooling
+
+---
+
+## 📜 License
+
+This project is part of Nu's internal development ecosystem.
