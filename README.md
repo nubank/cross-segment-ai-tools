@@ -1,70 +1,51 @@
-# PJ Core Dev Tools - AI Coding Rules
+# Cross Segment AI Tools
 
-This repository contains AI coding rules and patterns for PJ and Core development workflows. The CLI features have been moved to the nucli project.
+This repository contains **AI Agents** - specialized assistants that help developers with cross-segment development tasks (PJ, Core, High Income, and other segments). The CLI features have been moved to the nucli project.
 
 ## 📁 Structure
 
 ```
 .cursor/
-└── rules/                       # AI coding rules and patterns
-    ├── clojure/                 # Clojure language rules
-    │   ├── datomic/            # Datomic database rules
-    │   ├── diplomat_architecture/  # Diplomat Architecture patterns
-    │   └── testing/            # Testing guidelines
-    ├── scala/                   # Scala language rules
-    ├── pj/                      # PJ-specific rules and patterns
-    ├── core/                    # Core-specific rules and patterns
-    └── agents/                  # AI agent definitions (MD files)
+└── rules/                       # AI agent definitions
+    ├── agents/                  # General-purpose AI agents
+    ├── pj/                      # PJ-specific AI agents
+    │   └── agents/              # PJ domain agents
+    ├── core/                    # Core-specific AI agents
+    │   └── agents/              # Core domain agents
+    └── high-income/             # High Income-specific AI agents
+        └── agents/              # High Income domain agents
 ```
 
-## 🚀 Using the Rules
+## 🤖 Available AI Agents
 
-The rules in this repository are managed by the `pj-core-dev-tools` CLI, which is now part of the **nucli** project.
+This repository currently focuses on **AI Agents** - specialized assistants that help developers with cross-segment development tasks (PJ, Core, High Income, and other segments). These agents are defined as `.mdc` files and can be installed via the `cross-segment-ai-tools` CLI.
 
 ### Quick Install
 
-```bash
-# The CLI is now in nucli - install from there
-cd ~/dev/nu/nucli/nucli.d/pj-core-dev-tools.d
-./scripts/install
+> **Note**: The CLI is currently under development and will be integrated into **nucli**. Once available, you'll be able to use the `cross-segment-ai-tools` command to install agents to your projects.
 
-# Then use it to install rules to your projects
-pj-core-dev-tools rules install ~/dev/my-project
+```bash
+# Future CLI usage (coming soon):
+# cross-segment-ai-tools rules install ~/dev/my-project
+# cross-segment-ai-tools rules update ~/dev/my-project
+# cross-segment-ai-tools rules remove ~/dev/my-project
 ```
 
-### Available Rules
+### 🐦 PJ Agents
 
-#### 🔧 Clojure Rules
+PJ-specific AI agents are available in `.cursor/rules/pj/agents/`
 
-- **Core Language**: Idiomatic Clojure development patterns, data structures, and functional programming
-- **Diplomat Architecture**: Complete architectural patterns for layered service design
-- **Datomic**: Database interaction patterns and best practices
-- **Error Handling**: Robust error handling and validation patterns
-- **Testing**: Comprehensive testing strategies and patterns
-- **State Management**: Concurrent state management patterns
-- **Performance**: Java interop and performance optimization
+### 💎 High Income Agents
 
-#### 📊 Scala Rules
+High Income-specific AI agents are available in `.cursor/rules/high-income/agents/`
 
-- **Dataset Patterns**: Function-oriented dataset generation following data engineering best practices
-- **Unit Testing**: Comprehensive unit testing patterns
+### 🏦 Core Agents
 
-#### 🏢 PJ & Core Specific Rules
+Core-specific AI agents are available in `.cursor/rules/core/agents/`
 
-- **PJ Rules**: Business logic patterns specific to PJ (Pessoa Jurídica) domain
-- **Core Rules**: Core banking patterns and best practices
-- **AI Agents**: Individual AI agent definitions for specific use cases
+## 📖 Adding New AI Agents
 
-### 🎯 Rule Categories
-
-All rules are organized by:
-- **Language** (clojure, scala)
-- **Domain** (PJ, Core, architect patterns, testing)
-- **Specificity** (core language features vs specialized frameworks)
-
-## 📖 Adding AI Agents
-
-AI agents are defined as individual `.mdc` files in the `.cursor/rules/agents/` directory. Each agent file should:
+AI agents are defined as individual `.mdc` files in the `.cursor/rules/agents/` or domain-specific agent directories. Each agent file should:
 
 1. **Follow the `.mdc` format** with frontmatter metadata
 2. **Include clear description** of the agent's purpose
@@ -91,39 +72,44 @@ Place new AI agent files in:
 - `.cursor/rules/agents/` - For general-purpose agents
 - `.cursor/rules/pj/agents/` - For PJ-specific agents
 - `.cursor/rules/core/agents/` - For Core-specific agents
+- `.cursor/rules/high-income/agents/` - For High Income-specific agents
 
 ## 🔧 Development
 
-### Adding New Rules
+### Adding New Agents
 
-1. Create new `.mdc` files in the appropriate category folder
+1. Create new `.mdc` files in the appropriate agent directory:
+   - `.cursor/rules/agents/` - For general-purpose agents
+   - `.cursor/rules/pj/agents/` - For PJ-specific agents
+   - `.cursor/rules/core/agents/` - For Core-specific agents
+   - `.cursor/rules/high-income/agents/` - For High Income-specific agents
 2. Follow the existing naming conventions and structure
 3. Include comprehensive documentation and examples
-4. Test with the pj-core-dev-tools CLI (from nucli)
+4. Test with the cross-segment-ai-tools CLI (from nucli)
 
-### Rule Format
+### Agent Format
 
-Rules use `.mdc` (Markdown with Cursor extensions) format optimized for AI coding assistants:
+Agents use `.mdc` (Markdown with Cursor extensions) format optimized for AI coding assistants:
 
-- Clear, actionable patterns
-- Comprehensive examples
+- Clear, actionable instructions
+- Comprehensive examples and templates
 - Business context and reasoning
-- Anti-patterns to avoid
-- Testing strategies
+- Step-by-step workflows
+- User interaction patterns
 
 ## 🤝 Contributing
 
-1. Rules should be **specific and actionable**
+1. Agents should be **specific and actionable**
 2. Include **business context** and reasoning
-3. Provide **positive and negative examples**
+3. Provide **clear examples** and use cases
 4. Follow **existing naming conventions**
-5. Test rules with real projects before submitting
+5. Test agents with real projects before submitting
 
 ## 📜 License
 
-This project is part of the Nu PJ and Core development ecosystem. See repository license for details.
+This project is part of the Nu cross-segment development ecosystem. See repository license for details.
 
 ---
 
-**Note**: The CLI features for managing these rules have been moved to the nucli project for centralized tooling management. This repository now focuses exclusively on the AI coding rules and patterns.
+**Note**: The CLI features for managing these agents have been moved to the nucli project for centralized tooling management. This repository focuses exclusively on AI agents for cross-segment development workflows.
 
