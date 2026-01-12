@@ -65,25 +65,17 @@ nu cross-segment-ai-tools rules --help
 
 ```
 .cursor/
-├── commands/                    # AI commands (executable prompts)
-│   ├── core/                    # Core-specific commands
-│   │   └── pe-de-pano-v2.md    # Purple Loop campaign automation
-│   ├── pj/                      # PJ-specific commands
-│   └── cross-segments/          # Cross-segment commands
-│       └── rapidash.md          # Audience Manager attribute generator
-│
-└── rules/                       # AI rules (context & guidelines)
-    ├── agents/                  # General-purpose AI agents
-    │   └── Rapidash v1.1.md    # Rapidash agent definition
-    ├── pj/                      # PJ-specific rules
-    │   └── agents/
-    └── core/                    # Core-specific rules
-        └── agents/
-            └── clm_doc_creator_agent.mdc  # CLM business rules documentation automation
+└── commands/                    # AI commands (executable prompts & agents)
+    ├── core/                    # Core-specific commands
+    │   ├── pe-de-pano-v2.md    # Purple Loop campaign automation
+    │   └── clm_doc_creator.mdc  # CLM business rules documentation automation
+    ├── pj/                      # PJ-specific commands
+    └── cross-segments/          # Cross-segment commands
+        └── rapidash.md          # Audience Manager attribute generator
 
 docs/
 └── agents/
-    └── clm_doc_creator_agent.md  # CLM Doc Creator Agent documentation
+    └── clm_doc_creator.md       # CLM Doc Creator Agent documentation
 ```
 
 ---
@@ -190,9 +182,9 @@ CLM Doc Creator Agent automates the creation and maintenance of technical docume
 ### Adding a New Rule/Agent
 
 1. Create a new `.md` or `.mdc` file in the appropriate folder:
-   - `.cursor/rules/agents/` — General-purpose
-   - `.cursor/rules/pj/agents/` — PJ-specific
-   - `.cursor/rules/core/agents/` — Core-specific
+   - `.cursor/commands/core/` — Core-specific agents
+   - `.cursor/commands/pj/` — PJ-specific agents
+   - `.cursor/commands/cross-segments/` — Cross-segment agents
 
 2. For `.mdc` files, use frontmatter:
 

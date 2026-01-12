@@ -425,8 +425,8 @@ The agent generates **FreeWilly links** for all datasets:
 **Solutions**:
 1. Verify the agent is installed:
    ```bash
-   # Check if rules are installed in your project
-   ls .cursor/rules/core/agents/
+   # Check if commands are installed in your project
+   ls .cursor/commands/core/
    ```
 2. Ensure you're in the Itaipu project directory where the agent is installed
 3. Try explicit invocation: `@clm-doc-creator`
