@@ -143,7 +143,7 @@ CLM Doc Creator Agent automates the creation and maintenance of technical docume
 
 **How to use:**
 1. Open your Itaipu project in Cursor
-2. Invoke the agent: `@clm-doc-creator` or `clm-doc-creator`
+2. Use the command: `/clm-doc-creator`
 3. Specify a product (e.g., "document nucel") or let it detect from context
 4. Review the generated documentation before publishing
 
