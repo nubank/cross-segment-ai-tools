@@ -2,7 +2,7 @@
 title: CLM Doc Creator Agent
 description: Agent for creating automatic documentation of business rules (eligibility, activity, conversion)
 version: 1.0.0
-status: production
+status: experimentation
 ---
 
 # CLM Doc Creator Agent
