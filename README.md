@@ -79,6 +79,11 @@ nu cross-segment-ai-tools rules --help
     │   └── agents/
     └── core/                    # Core-specific rules
         └── agents/
+            └── clm_doc_creator_agent.mdc  # CLM business rules documentation automation
+
+docs/
+└── agents/
+    └── clm_doc_creator_agent.md  # CLM Doc Creator Agent documentation
 ```
 
 ---
@@ -104,6 +109,8 @@ Rapidash automates the entire process of creating audience manager attributes—
 
 **Supported domains:** `core-brazil`, `high-income`, `pj-brazil`, and more
 
+**Documentation:** Included in agent file
+
 ---
 
 ### 🦶 Pé de Pano — Purple Loop Campaign Automation
@@ -123,6 +130,36 @@ Pé de Pano automates three Purple Loop-related tasks:
 4. Review dry-run plan before applying changes
 
 **Supported products:** Money Boxes, Caixinha Turbo, Insurance, Lending, and 30+ more
+
+**Documentation:** Included in command file
+
+---
+
+### 📝 CLM Doc Creator Agent — Business Rules Documentation Automation
+
+**Domain:** Core (PF segment)
+
+CLM Doc Creator Agent automates the creation and maintenance of technical documentation for Customer Lifecycle Management (CLM) business rules in Confluence. It analyzes Scala code files for product eligibility, activity, and conversion logic, then creates human-readable documentation that non-technical stakeholders (PMs, business analysts) can understand.
+
+**Key Features:**
+- 🔍 **Analyzes Scala code** to extract business rules from activity, eligibility, and conversion datasets
+- 📊 **Queries metadata** from Data Discovery to enrich documentation
+- 📝 **Generates structured documentation** in clear, accessible language
+- 📤 **Publishes to Confluence** automatically with proper hierarchy and navigation
+- 🔄 **Detects changes** and provides intelligent diff comparisons before updating
+- 📈 **Maintains version history** with semantic versioning
+
+**How to use:**
+1. Open your Itaipu project in Cursor
+2. Invoke the agent: `@clm-doc-creator` or `clm-doc-creator`
+3. Specify a product (e.g., "document nucel") or let it detect from context
+4. Review the generated documentation before publishing
+
+**Requirements:**
+- Atlassian MCP Server (for Confluence integration)
+- Data Discovery MCP Server (for dataset metadata)
+
+**Documentation:** [docs/agents/clm_doc_creator_agent.md](docs/agents/clm_doc_creator_agent.md)
 
 ---
 
