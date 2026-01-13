@@ -68,7 +68,7 @@ nu cross-segment-ai-tools rules --help
 └── commands/                    # AI commands (executable prompts & agents)
     ├── core/                    # Core-specific commands
     │   ├── pe-de-pano-v2.md    # Purple Loop campaign automation
-    │   └── clm_doc_creator.mdc  # CLM business rules documentation automation
+    │   └── clm_doc_creator.md   # CLM business rules documentation automation
     ├── pj/                      # PJ-specific commands
     └── cross-segments/          # Cross-segment commands
         └── rapidash.md          # Audience Manager attribute generator
