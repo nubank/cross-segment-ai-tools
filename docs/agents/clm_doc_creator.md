@@ -197,7 +197,7 @@ After installing the agent and configuring MCP servers:
 2. Test that the agent is available and MCP servers are connected:
 
 ```
-@clm-doc-creator test connection
+/clm-doc-creator test connection
 ```
 
 The agent should confirm it can access:
@@ -212,37 +212,30 @@ The agent should confirm it can access:
 
 ### Invocation Methods
 
-#### 1. Direct Invocation
-Simply mention the agent:
+#### 1. Command Invocation
+Use the command prefix:
 ```
-clm-doc-creator
-@clm-doc-creator
+/clm-doc-creator
 ```
 
 #### 2. Document a Specific Product
 ```
-clm-doc-creator, create documentation for collateral-lines
-Document product nucel
-clm-doc-creator, update roxinho documentation
+/clm-doc-creator create documentation for collateral-lines
+/clm-doc-creator document product nucel
+/clm-doc-creator update roxinho documentation
 ```
 
 #### 3. Document Specific Files
 ```
-clm-doc-creator, document:
+/clm-doc-creator document:
 - ProductActivityNucelFact.scala
 - ProductEligibilityNucelFact.scala
 ```
 
-#### 4. Automatic Detection
-The agent activates automatically when you mention keywords like:
-- `documentation` + (`rules`, `business`, `activity`, `eligibility`, `conversion`)
-- `doc` + (`clm`, `product`)
-- `document` + (`product`, `rules`)
-
 ### Basic Workflow
 
-1. **Invoke the agent** using any method above
-2. **Agent confirms activation** and identifies files
+1. **Invoke the command** using `/clm-doc-creator`
+2. **Command confirms activation** and identifies files
 3. **Agent analyzes code** and extracts business rules
 4. **Agent queries metadata** (you'll see searches happening)
 5. **For updates**: Agent compares with existing documentation and shows diff
@@ -254,7 +247,7 @@ The agent activates automatically when you mention keywords like:
 ### Example Session
 
 ```
-You: clm-doc-creator, create documentation for nucel
+You: /clm-doc-creator create documentation for nucel
 
 Agent: 🔍 Searching for nucel files...
        ✓ ProductEligibilityNucelFact.scala
@@ -425,11 +418,11 @@ The agent generates **FreeWilly links** for all datasets:
 **Solutions**:
 1. Verify the agent is installed:
    ```bash
-   # Check if rules are installed in your project
-   ls .cursor/rules/core/agents/
+   # Check if commands are installed in your project
+   ls .cursor/commands/core/
    ```
 2. Ensure you're in the Itaipu project directory where the agent is installed
-3. Try explicit invocation: `@clm-doc-creator`
+3. Try explicit invocation: `/clm-doc-creator`
 4. Restart Cursor to reload the agent
 5. Verify MCP servers are connected (see Step 3 in MCP Server Setup)
 
