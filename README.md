@@ -70,8 +70,10 @@ nu cross-segment-ai-tools rules --help
     │   ├── pe-de-pano-v2.md    # Purple Loop campaign automation
     │   └── clm_doc_creator.md   # CLM business rules documentation automation
     ├── pj/                      # PJ-specific commands
+    │   └── Papa-Léguas - Campaign Updater - v1.1.md  # Ranking strategy synchronizer
     └── cross-segments/          # Cross-segment commands
-        └── rapidash.md          # Audience Manager attribute generator
+        ├── rapidash.md          # Audience Manager attribute generator
+        └── edwiges-cockpit-metric-creator.md  # Cockpit metric creation assistant
 
 docs/
 └── agents/
@@ -152,6 +154,67 @@ CLM Doc Creator Agent automates the creation and maintenance of technical docume
 - Data Discovery MCP Server (for dataset metadata)
 
 **Documentation:** [docs/agents/clm_doc_creator_agent.md](docs/agents/clm_doc_creator_agent.md)
+
+---
+
+### 🐦 Edwiges — Cockpit Metric Creator
+
+**Domain:** Cross-segment (Experimentation)
+
+Edwiges is an AI assistant that guides developers through creating simple metrics in Cockpit (Nu's experimentation platform) in a friendly, step-by-step manner. It helps create User-level Base Metrics (`-users`, `-volume`, `-value`) and ensures Event Logs and necessary records are created following established patterns.
+
+**Key Features:**
+- 🎯 **Guided workflow** - Step-by-step interactive process
+- 📊 **Multiple metric types** - Supports users, volume, and value metrics
+- 🗃️ **Event Log creation** - Automatically creates Event Logs when needed
+- ✅ **Validations** - Alerts about potential issues before proceeding
+- 🔍 **Dataset validation** - Checks dataset sharing and visibility requirements
+- 📝 **Code generation** - Creates production-ready Scala code
+- 🎨 **Formatting** - Runs code formatting automatically
+- 🔄 **Multiple metrics** - Create multiple metrics in the same session
+
+**How to use:**
+1. Open your Itaipu project in Cursor
+2. Use the command: `/edwiges-cockpit-metric-creator`
+3. Follow the interactive prompts step by step
+4. Review the generated code before committing
+
+**Supported metric types:**
+- **Users metrics** (`-users`) - Customer proportion metrics
+- **Volume metrics** (`-volume`) - Average frequency metrics
+- **Value metrics** (`-value`) - Average value metrics
+
+**Documentation:** Included in command file
+
+---
+
+### 🐦 Papa-Léguas — Ranking Strategy Synchronizer
+
+**Domain:** PJ (Pessoa Jurídica)
+
+Papa-Léguas synchronizes campaign strategies between Scala source files and CSV files. It helps manage Journey Moments, Narratives, and Campaigns across different ranking strategies (Heuristics, Random, and Projota) in a guided and safe manner.
+
+**Key Features:**
+- 🔍 **Consultar (Read)** - Export campaign configurations to CSV files
+- ➕ **Adicionar (Add)** - Add new campaigns to ranking strategies
+- 🔄 **Modificar (Modify)** - Update existing campaign configurations
+- ❌ **Deletar (Delete)** - Remove campaigns from ranking strategies
+- ✅ **Validations** - Ensures consistency across all ranking strategies
+- 🔒 **Safe modifications** - Preserves code formatting and comments
+- 📋 **PR creation** - Automatically creates pull requests with proper approvals
+
+**How to use:**
+1. Open your Itaipu project in Cursor
+2. Use the command: `/papa-leguas-campaign-updater` (or invoke the file directly)
+3. Follow the interactive menu in Portuguese
+4. Review changes before confirmation
+
+**Supported ranking strategies:**
+- **Heuristics** - Constant scoring strategy
+- **Random** - Random distribution strategy
+- **Projota** - Model-based ranking strategy
+
+**Documentation:** Included in command file
 
 ---
 
