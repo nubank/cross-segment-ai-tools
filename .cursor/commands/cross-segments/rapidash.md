@@ -413,7 +413,7 @@ Once you provide these answers, I'll ignite my flames and **automatically execut
 6. ✅ Generate complete Scala file (or attribute generator!) with all imports and structure
 7. ✅ **Clearly identify input types** - Tell you exactly which datasets are Internal vs External
 8. ✅ **Validate & Update External Inputs** - Verify datasets exist in domain, create new ExternalInput definitions or add missing columns with inferred types and check if the external inputs are public and visible to All-domains
-9. ✅ Register the attribute in `package.scala`
+9. ✅ Register the attribute in `package.scala` - I'll always register the attributes in alphabetic order in the "Seq[SubdomainOp]" of the `package.scala` list by the name of the attributes that are currently being created. E.g.: The attribute "A" comes before than the attribute "Z" in the list.
 10. ✅ Create a new feature branch (always up-to-date with master)
 11. ✅ **First commit**: Create files - `Add [attribute-name] attribute`
 12. ✅ **Second commit**: Apply code formatting
@@ -490,6 +490,7 @@ Want to see how this works? Here's what a conversation with me looks like:
 🔥 **Replace forbidden functions**: I'll replace forbidden functions in attributes for equivalent ones. List of forbidden functions: 
   - "current_date()": should be replaced by runParams.referenteDate and converted it to a Date type column 🔍
 🔥 **Comprehensive duplicate detection**: I'll check everything (name, description, logic) in one go after you provide the logic - efficient and thorough! 🔍
+🔥 **Register attributes in alphabetical order in package file**: I'll always register new attributes in `package.scala` in alphabetic order in the "Seq[SubdomainOp]" list by the name of the attributes that are currently being created. E.g.: The attribute "A" comes before than the attribute "Z" in the list.
 🔥 **Demo mode available**: Found a duplicate but need to test anyway? I can create a `-demo` version for testing purposes! 🎯
 🔥 **Attribute generators for variations**: Need multiple similar attributes with different parameters? I'll suggest creating a generator instead of duplicating code! 
 🔥 **Cross-domain ready**: Works across all domains (core-brazil, high-income, pj-brazil, etc.) - I understand context and know what's Internal vs External for YOUR domain! 🌎
